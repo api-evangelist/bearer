@@ -1,0 +1,63 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.bearer.com/reference/commands/ + https://github.com/Bearer/bearer
+name: Bearer CLI
+description: >-
+  Open-source static application security testing (SAST) CLI (Go, Elastic
+  License 2.0) that scans source code and analyzes data flows to discover,
+  filter, and prioritize security and privacy risks. Supports Go, Python, PHP,
+  JavaScript, TypeScript, Ruby, and Java. Covers OWASP Top 10 / CWE Top 25 and
+  sensitive-data (PII/PHI) flow detection with GDPR / DPIA / PIA reporting.
+license: Elastic License 2.0
+language: Go
+latest_version: v2.0.2
+repository: https://github.com/Bearer/bearer
+binary_package: packages/bearer-packages.yml
+install:
+- method: homebrew
+  command: brew install bearer/tap/bearer
+- method: script
+  command: 'curl -sfL https://raw.githubusercontent.com/Bearer/bearer/main/contrib/install.sh | sh'
+- method: docker
+  command: docker run --rm -v "$PWD:/tmp/scan" bearer/bearer:latest-amd64 scan /tmp/scan
+- method: apt
+  command: sudo apt install bearer
+- method: yum
+  command: sudo yum install bearer
+commands:
+- name: scan
+  description: Scan a directory or file for security and privacy risks.
+  flags:
+  - --format (json, yaml, sarif, gitlab-sast, rdjson, html)
+  - --report (security, privacy, dataflow)
+  - --severity
+  - --output
+  - --scanner
+  - --exit-code
+  - --config-file
+- name: init
+  description: Generate a default config to bearer.yml.
+- name: version
+  description: Print the version.
+- name: ignore add
+  description: Add an ignored fingerprint.
+  flags: [--author, --comment, --false-positive, --force, --ignore-file]
+- name: ignore show
+  description: Show an ignored fingerprint.
+  flags: [--all, --ignore-file]
+- name: ignore remove
+  description: Remove an ignored fingerprint.
+  flags: [--ignore-file]
+- name: ignore migrate
+  description: Migrate ignored fingerprints from bearer.yml to the ignore file.
+  flags: [--force, --ignore-file]
+common_flags:
+- --api-key
+- --config-file
+- --debug
+- --disable-version-check
+- --log-level
+- --no-color
+- --ignore-file
+outputs: [json, yaml, sarif, gitlab-sast, rdjson, html]
+docs: https://docs.bearer.com/reference/commands/

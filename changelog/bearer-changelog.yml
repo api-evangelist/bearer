@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/Bearer/bearer/releases
+scheme: github-releases
+versioning: semver
+current_version: v2.0.2
+url: https://github.com/Bearer/bearer/releases
+entries:
+- version: v2.0.2
+  date: '2026-05-18'
+  breaking: false
+  highlights:
+  - Added field-name support option.
+  - Fixed a segfault affecting Apple M-series chips.
+- version: v2.0.1
+  date: '2026-02-25'
+  breaking: false
+  highlights:
+  - Introduced a VisitNode function in the builder API for extensibility.
+- version: v2.0.0
+  date: '2026-01-29'
+  breaking: false
+  highlights:
+  - Major engine update with tree-sitter grammar updates, improving accuracy and
+    file-type support while keeping rule syntax backward-compatible.
+- version: v1.51.1
+  date: '2024-10-14'
+  breaking: false
+  highlights:
+  - Dependency updates and maintenance.
+- version: v1.51.0
+  date: '2024-09-03'
+  breaking: false
+  highlights:
+  - Extended reflexive methods to handle additional string operations for better
+    data-flow analysis.
+- version: v1.50.2
+  date: '2024-08-15'
+  breaking: false
+  highlights:
+  - Updated Go version and dependencies.
+- version: v1.50.1
+  date: '2024-08-13'
+  breaking: false
+  highlights:
+  - Fixed Python return-statement handling in dataflow analysis.

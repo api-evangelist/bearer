@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/Bearer/bearer/releases + docs.bearer.com
+subject: Bearer CLI (open-source SAST tool)
+versioning:
+  scheme: semver
+  distribution: github-releases
+  current_version: v2.0.2
+  latest_release_date: '2026-05-18'
+  policy_url: https://github.com/Bearer/bearer/releases
+deprecation:
+  policy_found: false
+  sunset_headers: false
+  note: >-
+    Bearer is a CLI, not a hosted API; no RFC 8594 Sunset/Deprecation headers
+    apply. No formal version-deprecation or end-of-life policy is published.
+    v2.0.0 was a major engine update that remained backward-compatible with
+    existing rule syntax.
+sla:
+  found: false
+status_page:
+  found: false
+  note: >-
+    No status page — the product is a locally-run CLI binary, not a hosted
+    service. Bearer's commercial platform was folded into Cycode in 2024.
+support:
+  source_code: https://github.com/Bearer/bearer
+  issues: https://github.com/Bearer/bearer/issues

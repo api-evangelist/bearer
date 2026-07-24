@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.bearer.com/ + https://docs.bearer.com/reference/commands/
+subject: Bearer CLI SAST tool
+note: >-
+  Bearer is a SAST/data-flow scanner, not a REST API, so transport-security
+  standards (oauth2, oidc, fapi, scim, odata, json:api, rfc9457) do not apply.
+  The standards below are the security frameworks Bearer's rules cover and the
+  interchange formats its scanner emits.
+conformances:
+- id: owasp-top-10
+  conforms: true
+  evidence: Bearer rules detect OWASP Top 10 vulnerability classes; documented on docs.bearer.com.
+- id: cwe-top-25
+  conforms: true
+  evidence: Bearer rules map findings to CWE Top 25 weakness identifiers.
+- id: sarif
+  conforms: true
+  evidence: 'bearer scan --format sarif emits SARIF-formatted results.'
+- id: gitlab-sast
+  conforms: true
+  evidence: 'bearer scan --format gitlab-sast emits the GitLab SAST report schema.'
+- id: rdjson-reviewdog
+  conforms: true
+  evidence: 'bearer scan --format rdjson emits reviewdog rdjson for inline PR review.'
+- id: gdpr-privacy-reporting
+  conforms: true
+  evidence: Privacy report + DPIA/PIA output classifies PII/PHI data flows for GDPR review.

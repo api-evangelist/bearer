@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+source: docs.bearer.com install docs + github.com/Bearer/bearer + Docker Hub / GHCR / Gemfury repos
+note: >-
+  Bearer ships as a single open-source SAST CLI binary (Go, Elastic License 2.0),
+  not a set of language SDKs. These entries are the first-party distribution
+  channels for that CLI binary. There is no public REST API client library.
+packages:
+- name: bearer/tap/bearer
+  registry: homebrew
+  official: true
+  install: brew install bearer/tap/bearer
+  url: https://github.com/Bearer/homebrew-tap
+- name: bearer/bearer
+  registry: docker-hub
+  official: true
+  install: docker pull bearer/bearer:latest-amd64
+  url: https://hub.docker.com/r/bearer/bearer
+- name: ghcr.io/bearer/bearer
+  registry: ghcr
+  official: true
+  install: docker pull ghcr.io/bearer/bearer
+  url: https://github.com/Bearer/bearer/pkgs/container/bearer
+- name: bearer
+  registry: apt
+  official: true
+  install: 'echo "deb [trusted=yes] https://apt.fury.io/bearer/ /" | sudo tee /etc/apt/sources.list.d/fury.list && sudo apt update && sudo apt install bearer'
+  url: https://apt.fury.io/bearer/
+- name: bearer
+  registry: yum
+  official: true
+  install: 'sudo tee /etc/yum.repos.d/fury.repo <<< "[fury]\nname=Gemfury Private Repo\nbaseurl=https://yum.fury.io/bearer/\nenabled=1\ngpgcheck=0" && sudo yum install bearer'
+  url: https://yum.fury.io/bearer/
+- name: bearer install script
+  registry: github-releases
+  official: true
+  install: 'curl -sfL https://raw.githubusercontent.com/Bearer/bearer/main/contrib/install.sh | sh'
+  url: https://github.com/Bearer/bearer/releases/latest

@@ -1,8 +1,29 @@
 aid: bearer
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bearer.png
 name: Bearer
-description: 'Bearer is a company surfaced as a portfolio company of partech, point-nine and added to
-  the API Evangelist network as a stub for enrichment. Sector: Infrastructure SaaS. This profile is a
-  lead awaiting the enrichment pipeline.'
+description: >-
+  Bearer is a developer-first static application security testing (SAST) platform
+  whose open-source CLI (written in Go, Elastic License 2.0) scans source code and
+  analyzes data flows to discover, filter, and prioritize security and privacy
+  risks. It detects OWASP Top 10 and CWE Top 25 vulnerabilities, tracks sensitive
+  data (PII/PHI) across a codebase, and produces GDPR / DPIA / PIA privacy reports.
+  Bearer supports Go, Python, PHP, JavaScript, TypeScript, Ruby, and Java, and
+  integrates into CI/CD via SARIF, GitLab SAST, and reviewdog output formats. The
+  company's commercial platform was acquired by Cycode in 2024; the Bearer CLI
+  remains open source. Bearer surfaced in the API Evangelist network as a portfolio
+  company of Partech and Point Nine and has been enriched from its public docs,
+  GitHub org, and live domain probes.
 url: https://raw.githubusercontent.com/api-evangelist/bearer/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -13,10 +34,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Infrastructure Saas
+- Application Security
+- Static Analysis
+- SAST
+- Code Security
+- Data Privacy
+- Developer Tools
+- CLI
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -26,3 +54,38 @@ maintainers:
 common:
 - type: Website
   url: https://www.bearer.com/
+- type: Documentation
+  url: https://docs.bearer.com/
+- type: Quickstart
+  url: https://docs.bearer.com/quickstart/
+- type: APIReference
+  url: https://docs.bearer.com/reference/commands/
+- type: Blog
+  url: https://www.bearer.com/blog
+- type: GitHubOrganization
+  url: https://github.com/Bearer
+- type: SourceCode
+  url: https://github.com/Bearer/bearer
+- type: TermsOfService
+  url: https://cycode.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://cycode.com/privacy-policy/
+- type: CLI
+  url: cli/bearer-cli.yml
+- type: Packages
+  url: packages/bearer-packages.yml
+- type: ChangeLog
+  url: changelog/bearer-changelog.yml
+- type: Lifecycle
+  url: lifecycle/bearer-lifecycle.yml
+- type: Conformance
+  url: conformance/bearer-conformance.yml
+- type: DomainSecurity
+  url: security/bearer-domain-security.yml
+- type: LLMsTxt
+  url: llms/bearer-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

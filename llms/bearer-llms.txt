@@ -1,0 +1,35 @@
+# Bearer
+
+> Bearer is a developer-first static application security testing (SAST) platform. Its open-source CLI (Go, Elastic License 2.0) scans source code and analyzes data flows to discover, filter, and prioritize security and privacy risks. Supports Go, Python, PHP, JavaScript, TypeScript, Ruby, and Java. Bearer's commercial platform was acquired by Cycode in 2024; the Bearer CLI remains open source.
+
+## Product
+- Bearer CLI: free, open-source SAST engine — vulnerability (OWASP Top 10 / CWE Top 25) and sensitive-data (PII/PHI) flow detection with GDPR / DPIA / PIA reporting.
+- No public REST API, OpenAPI, or OAuth surface — Bearer is a locally-run / CI-run command-line binary.
+
+## Commands
+- bearer scan: scan a directory or file (--format json|yaml|sarif|gitlab-sast|rdjson|html, --report security|privacy|dataflow, --severity, --output, --exit-code).
+- bearer init: generate a default bearer.yml config.
+- bearer ignore add|show|remove|migrate: manage ignored finding fingerprints.
+- bearer version: print the version.
+
+## Install
+- Homebrew: brew install bearer/tap/bearer
+- Script: curl -sfL https://raw.githubusercontent.com/Bearer/bearer/main/contrib/install.sh | sh
+- Docker: bearer/bearer:latest-amd64 (Docker Hub) or ghcr.io/bearer/bearer
+- apt / yum via apt.fury.io/bearer and yum.fury.io/bearer
+
+## Docs
+- Documentation: https://docs.bearer.com/
+- Quickstart: https://docs.bearer.com/quickstart/
+- Commands reference: https://docs.bearer.com/reference/commands/
+- Source code: https://github.com/Bearer/bearer
+- Releases / changelog: https://github.com/Bearer/bearer/releases
+- Blog: https://www.bearer.com/blog
+
+## Repo artifacts
+- packages/bearer-packages.yml — CLI distribution channels
+- cli/bearer-cli.yml — command surface + install methods
+- changelog/bearer-changelog.yml — recent release history
+- lifecycle/bearer-lifecycle.yml — versioning posture
+- conformance/bearer-conformance.yml — standards coverage (OWASP/CWE/SARIF/GDPR)
+- security/bearer-domain-security.yml — TLS/HSTS/SPF/DMARC posture
