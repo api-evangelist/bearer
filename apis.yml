@@ -52,6 +52,16 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: IssueTracker
+  url: https://github.com/Bearer/bearer/issues
+- type: Releases
+  url: https://github.com/Bearer/bearer/releases
+- type: SecurityPolicy
+  url: https://github.com/Bearer/bearer/blob/main/SECURITY.md
+- type: CodeOfConduct
+  url: https://github.com/Bearer/bearer/blob/main/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/Bearer/bearer/blob/main/CONTRIBUTING.md
 - type: Website
   url: https://www.bearer.com/
 - type: Documentation
