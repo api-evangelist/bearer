@@ -1,6 +1,10 @@
 aid: bearer
 deliveryModel:
   model: unknown
+  license_evidence:
+    repo: bearer/bearer
+    spdx: NOASSERTION
+    stars: 2749
   open_source: unknown
   commercial: true
   callable_host: false
@@ -9,7 +13,7 @@ deliveryModel:
   source:
   - pricing
   - repository-unlicensed
-  generated: '2026-08-28'
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: unknown
@@ -48,6 +52,16 @@ specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-18'
 tags:
+- Company
+- Infrastructure Saas
+- Application Security
+- Static Analysis
+- SAST
+- Code Security
+- Privacy
+- Developer Tools
+- CLI
+tags_raw:
 - Company
 - Infrastructure Saas
 - Application Security
